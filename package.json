@@ -1,34 +1,38 @@
 {
-  "name": "neutrino-typescript-eslint",
-  "version": "1.0.5",
-  "description": "Typescript ESLint integration for neutrino projects",
-  "files": [
-    "index.js"
-  ],
+  "name": "neutrino-airbnb-typescript",
+  "version": "1.0.0",
+  "description": "Neutrino preset for adding Airbnb's TS ESLint config for React, following the Airbnb styleguide",
   "main": "index.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidje13/neutrino-typescript-eslint.git"
-  },
   "keywords": [
     "neutrino",
+    "neutrino-preset",
+    "airbnb-typescript",
+    "airbnb",
+    "eslint",
     "typescript"
   ],
-  "author": "David Evans",
+  "author": "Jacek Tomaszeski <jacek@jtom.me>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/davidje13/neutrino-typescript-eslint/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtomaszewski/neutrino-airbnb-typescript.git"
   },
-  "homepage": "https://github.com/davidje13/neutrino-typescript-eslint#readme",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.x",
-    "@typescript-eslint/parser": "2.x",
-    "deepmerge": "4.x",
-    "neutrino-patch": "git+https://github.com/davidje13/neutrino-patch#semver:^1.0.3"
+    "@neutrinojs/eslint": "9.1.0",
+    "eslint-config-airbnb-typescript": "7.2.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^3.0.0"
   },
   "peerDependencies": {
-    "typescript": "3.x",
-    "eslint": "5.x || 6.x"
+    "eslint": "^6.0.0",
+    "neutrino": "^9.0.0",
+    "webpack": "^4.0.0"
   }
 }

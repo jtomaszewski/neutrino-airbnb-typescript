@@ -1,32 +1,31 @@
 # Neutrino Typescript ESLint
 
-Provides typescript integration with ESLint for neutrino projects.
-
-ESLint [replaces TSLint](https://eslint.org/blog/2019/01/future-typescript-eslint) for linting TypeScript.
+Provides typescript integration with ESLint for neutrino React projects using Airbnb's ESLint config, following the Airbnb styleguide.
 
 ## Installation
 
 This package is intended for use with [neutrino-typescript](https://github.com/davidje13/neutrino-typescript#readme),
-and any `eslint` module (e.g. `@neutrino/eslint` / `@neutrino/airbnb` / etc.),
 so you should already have those installed and configured.
+
+Note: Do not use `@neutrino/airbnb`. This preset will include airbnb preset on its' own.
 
 1. Install dependencies:
 
    ```bash
-   npm install --save-dev git+https://github.com/davidje13/neutrino-typescript-eslint#semver:^1.0.5
+   npm install --save-dev git+https://github.com/jtomaszewski/neutrino-airbnb-typescript
    ```
 
 2. Include in `.neutrinorc.js`:
 
    ```javascript
-   const typescriptLint = require('neutrino-typescript-eslint');
+   const airbnbTypescript = require('neutrino-airbnb-typescript');
    // ...
 
    module.exports = {
      use: [
        typescript(), // must be first in use section
-       typescriptLint(), // order does not matter; can be later
-       eslint(), // or airbnb or any other eslint-based module
+       airbnbTypescript(), // order does not matter; can be later
+       eslint(), // or any other eslint-based module
        node(), // or whichever target you are using
      ],
    };
